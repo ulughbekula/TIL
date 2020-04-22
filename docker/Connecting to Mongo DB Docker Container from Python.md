@@ -32,3 +32,6 @@ db = client["customersdb"]
 customers = db["customers"]
 for x in customers.find():
     print(x)
+
+
+https://medium.com/codervlogger/python-mongodb-tutorial-using-docker-52f330852b4c
