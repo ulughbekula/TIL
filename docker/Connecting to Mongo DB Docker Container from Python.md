@@ -33,5 +33,8 @@ customers = db["customers"]
 for x in customers.find():
     print(x)
 
+mongoexport --db compared_info_db --collection mobile_phones | sed '/"_id":/s/"_id":[^,]*,//' > file_name.json
+docker cp d25254a605b2:/file_name.json ~/Downloads/
+mongoexport --db compared_data_db --collection mobile_phones_2020-04-26 --jsonArray --out mobile_phones_2020-04-26.json
 
 https://medium.com/codervlogger/python-mongodb-tutorial-using-docker-52f330852b4c
